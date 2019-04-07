@@ -1,0 +1,19 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "first test script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anees",
+  "license": "ISC",
+  "dependencies": {
+    "@citizenfx/client": "^1.0.1164-1",
+    "@citizenfx/server": "^1.0.1164-1",
+    "@types/node": "^11.13.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.2",
+    "webpack": "^4.29.6"
+  }
+}
