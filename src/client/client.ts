@@ -24,10 +24,10 @@ RegisterCommand(
 
 RegisterCommand(
   "myid", 
-  function() {
-    let playerId = GetPlayerServerId(-1)
-    msg(`Your ID is: ${playerId}`)
-  }, 
+  async function() {
+    let playerId = await GetPlayerServerId(-1)
+    await msg(`Your ID is: ${playerId}`)
+  },
   false
 );
 
@@ -37,10 +37,15 @@ setInterval(() => {
   let h_key = 74
   let x_key = 73
   
-  if(IsControlJustPressed(1, h_key)) {
+  if(IsControlJustPressed(0, h_key)) {
     console.log("The key was pressed: ", h_key)
     giveWeapon("WEAPON_SMG")
     giveWeapon("WEAPON_PUMPSHOTGUN")
     alert("~b~Given Weapons with ~INPUT_VEH_HEADLIGHT~")
+  }
+
+  if(IsControlJustPressed(0, x_key)) {
+    SetPlayerWantedLevel(-1, 0, false)
+    console.log("The key was pressed: ", x_key)
   }
 }, 15)
